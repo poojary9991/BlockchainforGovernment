@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+
+    <% if(busDetails.companyName === '') { %>
+        <h5 class="container">No Data Available....</h5>
+    <% } else { %>
+    <table class="table table-borderless container d-flex justify-content-around">
+        <tbody>
+            <tr>
+                <td>
+                    <h5>
+                        <p>Unique ID:</p> 
+                    </h5>
+                    <p class="label label-info" id="_uniqueIdBus"><%= uniqueId %></p>
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_company">Company name :</label>
+                        <p class="border-bottom mx-3 w-50" id="_company"><%= busDetails.companyName %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="role">Role:</label>
+                        <p class="border-bottom mx-3 w-50" id="role"><%= busDetails.position %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="yrs">Years:</label>
+                        <p class="border-bottom mx-3 w-50" id="yrs"><%= busDetails.year %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="slry">salary:</label>
+                        <p class="border-bottom mx-3 w-50" id="slry"><%= busDetails.salary %></p>
+                    </td>
+                </div>
+            </tr>
+
+        </tbody>
+    </table>
+    <% } %>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

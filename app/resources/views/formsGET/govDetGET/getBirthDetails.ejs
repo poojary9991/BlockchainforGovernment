@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+    <% if(birthDetails.name === '') { %>
+        <h5 class="container">No Data Available....</h5>
+    <% } else { %>
+    <table class="table table-borderless container d-flex justify-content-around">
+
+        <tbody>
+            <tr>
+                <td>
+                    <h5>
+                        <p>Unique ID:</p>
+                    </h5>
+                    <p class="label label-info" id="_uniqueIdBank"><%= uniqueId %></p>
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">Name :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= birthDetails.name %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_branch">Sex :</label>
+                        <p class="border-bottom mx-3 w-50" id="_branch"><%= birthDetails.sex %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_account">Date of Birth :</label>
+                        <p class="border-bottom mx-3 w-50" id="_account"><%= birthDetails.dateOfBirth %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_IFSC">Place of Birth :</label>
+                        <p class="border-bottom mx-3 w-50" id="_IFSC"><%= birthDetails.placeOfBirth %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label>Father's Name :</label>
+                        <p class="border-bottom mx-3 w-50" ><%= birthDetails.nameOfFather %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label>Mother's Name :</label>
+                        <p class="border-bottom mx-3 w-50" ><%= birthDetails.nameOfMother %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label>Date of Registration :</label>
+                        <p class="border-bottom mx-3 w-50"><%= birthDetails.dateOfRegistration %></p>
+                    </td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+    <% } %>
+
+    <footer>
+        <%- include('../../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

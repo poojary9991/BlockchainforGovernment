@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #77ACF1;">
+    <div class="container container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Mind Optimizers</a>
+        </div>
+
+        <!-- <div class="nav navbar-nav navbar-right"> -->
+            <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Requests
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/sentRequests">Sent</a></li>
+                        <li><a class="dropdown-item" href="/receivedRequests">Recieved</a></li>
+                    </ul>
+                </li>
+            </ul>
+        <!-- </div> -->
+
+        <ul class="nav navbar-nav">
+            <form class="form-inline d-flex" action="/search" method="POST">
+                <input class="form-control me-lg-3" name="search" type="search" placeholder="Search here">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </ul>
+
+    </div>
+</nav>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+    <% if(domicileDetails.name === '') { %>
+        <h5 class="container">No Data Available....</h5>
+    <% } else { %>
+
+    <table class="table table-borderless container d-flex justify-content-around">
+
+        <tbody>
+            <tr>
+                <td>
+                    <h5>
+                        <p>Unique ID:</p>
+                    </h5>
+                    <p class="label label-info" id="_uniqueIdBank"><%= uniqueId %></p>
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">Name :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= domicileDetails.name %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_state">State :</label>
+                        <p class="border-bottom mx-3 w-50" id="_state"><%= domicileDetails.state %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_serialNo">Serial No. :</label>
+                        <p class="border-bottom mx-3 w-50" id="_serialNo"><%= domicileDetails.serialNo %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_district">District :</label>
+                        <p class="border-bottom mx-3 w-50" id="_district"><%= domicileDetails.district %></p>
+                    </td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+    <% } %>
+
+    <footer>
+        <%- include('../../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

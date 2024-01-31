@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+    <% if(eduDetails.length === 0) { %>
+        <h5 class="container">No Data Available....</h5>
+    <% } %>
+    <% if(eduDetails.length !== 0) { %>
+    <% eduDetails.forEach((curr, index) => { %>
+    <table class="table table-borderless container d-flex justify-content-around">
+
+        <tbody>
+            <tr>
+                <td>
+                    <h5>
+                        <p>Unique ID:</p>
+                    </h5>
+                    <p class="label label-info" id="_uniqueIdBank"><%= uniqueId %></p>
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">Name :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= curr.name %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_branch">Board :</label>
+                        <p class="border-bottom mx-3 w-50" id="_branch"><%= curr.board %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_account">Course :</label>
+                        <p class="border-bottom mx-3 w-50" id="_account"><%= curr.course %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_IFSC">Year :</label>
+                        <p class="border-bottom mx-3 w-50" id="_IFSC"><%= curr.year %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label >Seat No :</label>
+                        <p class="border-bottom mx-3 w-50" ><%= curr.seatNo %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label >Percentage :</label>
+                        <p class="border-bottom mx-3 w-50" ><%= curr.percentage %></p>
+                    </td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+    <% }) %>
+    <% } %>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

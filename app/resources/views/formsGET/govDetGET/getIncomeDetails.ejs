@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+
+    <% if(incomeDetails.tahsildarKaryalay === '') { %>
+        <h5 class="container">No Data Available....</h5>
+    <% } else { %>
+    <table class="table table-borderless container d-flex justify-content-around">
+
+        <tbody>
+            <tr>
+                <td>
+                    <h5>
+                        <p>Unique ID:</p>
+                    </h5>
+                    <p class="label label-info" id="_uniqueIdBank"><%= uniqueId %></p>
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">Tahsildar Karyalay :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= incomeDetails.tahsildarKaryalay %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">Ordinal No :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= incomeDetails.ordinalNo %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">District :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= incomeDetails.district %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">To :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= incomeDetails.to %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">Year :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= incomeDetails.year %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">Annual Income :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= incomeDetails.annualIncome %></p>
+                    </td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+    <% } %>
+
+    <footer>
+        <%- include('../../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

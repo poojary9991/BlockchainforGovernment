@@ -1,0 +1,302 @@
+####################### Bank Details #######################
+GET  http://localhost:8000/bankDetails/0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+// auth header : from_address
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+# {
+#     "to_address" : "0x1bE8965230B66155f3D7B57c111E304Bcd87912f",
+#     "from_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+# }
+
+###
+POST http://localhost:8000/grantFillBankDet
+Content-Type: application/json
+auth: 0x6015E5410352FcaAd0E45A9C2Bb9B2E300b17a26  
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+POST http://localhost:8000/grantViewPerBank
+Content-Type: application/json
+auth: 0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+POST http://localhost:8000/fillBankDetails
+Content-Type: application/json
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+{
+    "to_address" : "0x1bE8965230B66155f3D7B57c111E304Bcd87912f",
+    "ifscCode": "SBI84509", 
+    "acNo": "570823922", 
+    "bankName": "SBI", 
+    "branch": "bhayander"
+}
+
+####################### Business Details #######################
+GET  http://localhost:8000/businessDetails/0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+// auth header : from_address
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+###
+POST http://localhost:8000/grantFillBusinessDet
+Content-Type: application/json
+auth: 0x6015E5410352FcaAd0E45A9C2Bb9B2E300b17a26  
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+POST http://localhost:8000/grantViewPerBus
+Content-Type: application/json
+auth: 0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+POST http://localhost:8000/fillBusinessDetails
+Content-Type: application/json
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+{
+    "to_address" : "0x1bE8965230B66155f3D7B57c111E304Bcd87912f",
+    "companyName" : "Infosys",
+    "position" : "SDE",
+    "year" : "2011-15",
+    "salary" : "20,000"
+}
+
+####################### Government Details #######################
+
+POST http://localhost:8000/grantFillGovernmentDet
+Content-Type: application/json
+auth: 0x6015E5410352FcaAd0E45A9C2Bb9B2E300b17a26  
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+POST http://localhost:8000/grantViewPerGov
+Content-Type: application/json
+auth: 0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+GET  http://localhost:8000/birthDetails/0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+// auth header : from_address
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+###
+POST http://localhost:8000/fillBirthDetails
+Content-Type: application/json
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+{
+    "to_address" : "0x1bE8965230B66155f3D7B57c111E304Bcd87912f",
+    "name": "darshana",
+    "sex": "female",
+    "dateOfBirth": "2002-04-11",
+    "placeOfBirth": "akola",
+    "nameOfFather": "Vishnu",
+    "nameOfMother": "Sindhu",
+    "dateOfRegistration": "2004-05-12"
+}
+
+###
+GET  http://localhost:8000/domicileDetails/0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+// auth header : from_address
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+###
+POST http://localhost:8000/fillDomicileDetails
+Content-Type: application/json
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+{
+    "to_address" : "0x1bE8965230B66155f3D7B57c111E304Bcd87912f",
+    "name": "darshana", 
+    "state": "Maharashtra", 
+    "serialNo": "3682", 
+    "district": "Thane"
+}
+
+###
+GET  http://localhost:8000/incomeDetails/0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+// auth header : from_address
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+###
+POST http://localhost:8000/fillIncomeDetails
+Content-Type: application/json
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+{
+    "to_address" : "0x1bE8965230B66155f3D7B57c111E304Bcd87912f",
+    "tahsildarKaryalay": "bhayander(w)",
+    "ordinalNo": "3468",
+    "district": "thane",
+    "to": "Vishnu Mule",
+    "year": "2021-22",
+    "annualIncome": "3,00,000"
+}
+
+###
+GET  http://localhost:8000/casteDetails/0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+// auth header : from_address
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+###
+POST http://localhost:8000/fillCasteDetails
+Content-Type: application/json
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+{
+    "to_address" : "0x1bE8965230B66155f3D7B57c111E304Bcd87912f",
+    "daughter_son_of": "Jayant Bhanawat", 
+    "district": "Thane", 
+    "tahsil": "Thane", 
+    "to": "Vanshika Bhanawat", 
+    "caste": "OBC"
+}
+
+####################### Education Details #######################
+GET  http://localhost:8000/eduDetails/0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+// auth header : from_address
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+###
+POST http://localhost:8000/grantFillEduDet
+Content-Type: application/json
+auth: 0x6015E5410352FcaAd0E45A9C2Bb9B2E300b17a26  
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+POST http://localhost:8000/grantViewPerEdu
+Content-Type: application/json
+auth: 0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+POST http://localhost:8000/fillEduDetails
+Content-Type: application/json
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+{
+    "to_address" : "0x1bE8965230B66155f3D7B57c111E304Bcd87912f",
+    "board": "SSC", 
+    "name": "Darshana Mule", 
+    "course": "", 
+    "year": "2017", 
+    "stNo": "MH382", 
+    "percentage": "84"
+}
+
+####################### Medical Details #######################
+GET  http://localhost:8000/medicalDetails/0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+// auth header : from_address
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+###
+POST http://localhost:8000/grantFillMedicalDet
+Content-Type: application/json
+auth: 0x6015E5410352FcaAd0E45A9C2Bb9B2E300b17a26  
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+POST http://localhost:8000/grantViewPerMed
+Content-Type: application/json
+auth: 0x1bE8965230B66155f3D7B57c111E304Bcd87912f
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+###
+POST http://localhost:8000/fillMedicalDetails
+Content-Type: application/json
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+{
+    "to_address" : "0x1bE8965230B66155f3D7B57c111E304Bcd87912f",
+    "tpaName": "Darshana Mule",
+    "tpaId": "78qryh487",
+    "insuredCode": "7498",
+    "insuredName": "Darshana Mule",
+    "prevPolicyNo": "74922",
+    "mediclaimCpny": "BharatMed",
+    "insurance": "full",
+    "bloodGrp": "AB+"
+}
+
+
+######################## Requests ################################
+
+GET http://localhost:8000/sentRequests
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201  
+
+###
+GET http://localhost:8000/receivedRequests
+auth: 0x1bE8965230B66155f3D7B57c111E304Bcd87912f  
+
+###
+POST http://localhost:8000/requestSent
+Content-Type: application/json
+auth: 0x4fc5169370F255388D197CAb1fee1375B4dA9201 
+
+{
+    "sent_to": "0x1bE8965230B66155f3D7B57c111E304Bcd87912f"
+}
+
+###
+POST http://localhost:8000/grantViewOrFillPer
+Content-Type: application/json
+auth: 0x1bE8965230B66155f3D7B57c111E304Bcd87912f 
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201",
+    "per_type" : "view"
+}
+
+###
+POST http://localhost:8000/grantViewOrFillPer
+Content-Type: application/json
+auth: 0x6015E5410352FcaAd0E45A9C2Bb9B2E300b17a26
+
+{
+    "to_address" : "0x4fc5169370F255388D197CAb1fee1375B4dA9201",
+    "per_type" : "fill",
+    "forDomain" : "medical"
+}
+
+###
+POST http://localhost:8000/rejectRequest
+Content-Type: application/json
+auth: 0x1bE8965230B66155f3D7B57c111E304Bcd87912f 
+
+{
+    "to_address": "0x4fc5169370F255388D197CAb1fee1375B4dA9201"
+}
+
+

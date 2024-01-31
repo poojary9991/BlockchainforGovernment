@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+
+    <% if(medDetails.mediclaimCpny === '') { %>
+        <h5 class="container">No Data Available....</h5>
+    <% } else { %>
+    <table class="table table-borderless container d-flex justify-content-around">
+        <tbody>
+            <tr>
+                <td>
+                    <h5>
+                        <p>Unique ID:</p> 
+                    </h5>
+                    <p class="label label-info" id="_uniqueIdBus"><%= uniqueId %></p>
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_company">Insurance Company:</label>
+                        <p class="border-bottom mx-3 w-50" id="_company"><%= medDetails.mediclaimCpny %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="role">Policy No:</label>
+                        <p class="border-bottom mx-3 w-50" id="role"><%= medDetails.insurance %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="yrs">Previous Policy No:</label>
+                        <p class="border-bottom mx-3 w-50" id="yrs"><%= medDetails.prevPolicyNo %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="slry">Insured Code:</label>
+                        <p class="border-bottom mx-3 w-50" id="slry"><%= medDetails.insuredCode %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="slry">Insured Name:</label>
+                        <p class="border-bottom mx-3 w-50" id="slry"><%= medDetails.insuredName %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="slry">TPA Id:</label>
+                        <p class="border-bottom mx-3 w-50" id="slry"><%= medDetails.tpaId %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="slry">TPA Name:</label>
+                        <p class="border-bottom mx-3 w-50" id="slry"><%= medDetails.tpaName %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="slry">Blood Group:</label>
+                        <p class="border-bottom mx-3 w-50" id="slry"><%= medDetails.bloodGrp %></p>
+                    </td>
+                </div>
+            </tr>
+
+        </tbody>
+    </table>
+    <% } %>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

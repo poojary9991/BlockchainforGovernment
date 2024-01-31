@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+    <% if(casteDetails.daughter_son_of === '') { %>
+        <h5 class="container">No Data Available....</h5>
+    <% } else { %>
+    <table class="table table-borderless container d-flex justify-content-around">
+
+        <tbody>
+            <tr>
+                <td>
+                    <h5>
+                        <p>Unique ID:</p>
+                    </h5>
+                    <p class="label label-info" id="_uniqueIdBank"><%= uniqueId %></p>
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_dsof">Daughter/Son of :</label>
+                        <p class="border-bottom mx-3 w-50" id="_dsof"><%= casteDetails.daughter_son_of %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_district">District :</label>
+                        <p class="border-bottom mx-3 w-50" id="_district"><%= casteDetails.district %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_tahsil">Tahsil :</label>
+                        <p class="border-bottom mx-3 w-50" id="_tahsil"><%= casteDetails.tahsil %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_to">To :</label>
+                        <p class="border-bottom mx-3 w-50" id="_to"><%= casteDetails.to %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="caste">Caste :</label>
+                        <p class="border-bottom mx-3 w-50" id="caste"><%= casteDetails.caste %></p>
+                    </td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+    <% } %>
+
+    <footer>
+        <%- include('../../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

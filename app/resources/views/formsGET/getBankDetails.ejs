@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+    <% if(bankDetails.bankName === '') { %>
+        <h5 class="container">No Data Available....</h5>
+    <% } else { %>
+    <table class="table table-borderless container d-flex justify-content-around">
+
+        <tbody>
+            <tr>
+                <td>
+                    <h5>
+                        <p>Unique ID:</p>
+                    </h5>
+                    <p class="label label-info" id="_uniqueIdBank"><%= uniqueId %></p>
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_bank">Bank name :</label>
+                        <p class="border-bottom mx-3 w-50" id="_bank"><%= bankDetails.bankName %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_branch">Branch :</label>
+                        <p class="border-bottom mx-3 w-50" id="_branch"><%= bankDetails.branch %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex">
+                        <label for="_account">Account no. :</label>
+                        <p class="border-bottom mx-3 w-50" id="_account"><%= bankDetails.acNo %></p>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td class="d-flex"> 
+                        <label for="_IFSC">ifsc code :</label>
+                        <p class="border-bottom mx-3 w-50" id="_IFSC"><%= bankDetails.ifscCode %></p>
+                    </td>
+                </div>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+    <% } %>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+
+    <% if(sentArr.length===0) { %>
+        <h5 class="container">Nothing here....</h5>
+        <% } else { %>
+            <table class="table container border table-hover table-sm">
+                <tr class="table-primary">
+                    <td>
+                        <p>#</p>
+                    </td>
+                    <td>
+                        <p>Unique ID</p>
+                    </td>
+                </tr>
+                <% sentArr.forEach((curr, index)=> { %>
+                    <tr>
+                        <td>
+                            <%= index+1 %>
+                        </td>
+                        <td>
+                            <%= curr %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </table>
+            <% } %>
+
+            <footer>
+                <%- include('../partials/footer'); %>
+            </footer>
+
+</body>
+
+</html>

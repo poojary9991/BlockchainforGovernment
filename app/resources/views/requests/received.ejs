@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+    <% if(receivedArr.length===0) { %>
+        <h5 class="container">Nothing here....</h5>
+        <% } else { %>
+            <table class="table container border table-hover table-sm">
+                <tr class="table-primary">
+                    <td>
+                        <p>#</p>
+                    </td>
+                    <td>
+                        <p>Unique ID</p>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <% receivedArr.forEach((curr, index)=> { %>
+                    <tr>
+                        <td>
+                            <%= index+1 %>
+                        </td>
+                        <td>
+                            <%= curr %>
+                        </td>
+                        <td>
+                            <form action="/grantViewOrFillPer" method="POST">
+                                <input type="text" name="to_address" value="<%= curr %>" hidden>
+                                <% if(owner) { %>
+                                    <input type="text" name="per_type" value="fill" hidden>
+                                    <select name="forDomain">
+                                        <option value="medical">Medical</option>
+                                        <option value="government">Government</option>
+                                        <option value="education">Education</option>
+                                        <option value="business">Business</option>
+                                        <option value="bank">Bank</option>
+                                    </select>
+                                    <% } else { %>
+                                        <input type="text" name="per_type" value="view" hidden>
+                                        <% } %>
+                                            <button class="btn btn-success btn-md" style="margin-left: 20px;"
+                                                type="submit">Accept</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/rejectRequest" method="POST">
+                                <input type="text" name="to_address" value="<%= curr %>" hidden>
+                                <button class="btn btn-danger btn-md" type="submit">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </table>
+            <% } %>
+
+                <footer>
+                    <%- include('../partials/footer'); %>
+                </footer>
+
+</body>
+
+</html>

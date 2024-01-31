@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+    </div>
+    <div class="container" style="text-align:left;">
+        <p class="btn btn-primary">Fill Education Details :</p> 
+    </div>
+    <table class="table table-borderless container d-flex justify-content-around">
+        <form action="/fillEduDetails" method="post">
+        <tbody>
+            <tr>
+                <td>
+                    <h4>Unique ID:</h4>
+                    <p><%= uniqueId %></p> 
+                    <input hidden type="text" value="<%= uniqueId %>" name="to_address">
+                </td>
+            </tr>
+            <tr>
+                <div>
+                    <td>
+                        <label for="board">Board :</label>
+                        <input type="text" value="" name="board" id="board">
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td> 
+                        <label for="name">Name :</label>
+                        <input type="text" value="" name="name" id="name">
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td>
+                        <label for="course">Course :</label>
+                        <input type="text" value="" name="course" id="course">
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td> 
+                        <label for="year">Year :</label>
+                        <input type="text" value="" name="year" id="year">
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td> 
+                        <label for="stNo">Seat No. :</label>
+                        <input type="text" value="" name="stNo" id="stNo">
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td> 
+                        <label for="percentage">Percentage :</label>
+                        <input type="text" value="" name="percentage" id="percentage">
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td>
+                        <H5>PLEASE CONFIRM</H5>
+                        <label for="detailsConfirmation"> Have you added the details correctly?</label>
+                        <select name="myGovernmentdetails" id="detailsConfirmation">
+                            <option value="YES">YES</option>
+                            <option value="NO" Selected>NO </option>
+                        </select>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div class="button">
+                    <td> 
+                        <input class="btn btn-primary" style="text-align:right" type="submit" value="Submit">
+                        <input class="btn btn-primary" type="reset" value="Reset">
+                    </td>
+                </div>
+            </tr>
+        </tbody>
+    </form>
+    </table>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>
